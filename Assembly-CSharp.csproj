@@ -60,20 +60,30 @@
     <Analyzer Include="D:\UnityGlobal\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\GameActions\DrawCardGA.cs" />
+    <Compile Include="Assets\Scripts\General\ActionSystem\ActionSystem.cs" />
     <Compile Include="Assets\DOTween_1_2_785\DOTween\Modules\DOTweenModulePhysics2D.cs" />
     <Compile Include="Assets\Scripts\Views\HandView.cs" />
     <Compile Include="Assets\DOTween_1_2_785\DOTween\Modules\DOTweenModuleSprite.cs" />
     <Compile Include="Assets\DOTween_1_2_785\DOTween\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\Scripts\Models\Card.cs" />
     <Compile Include="Assets\DOTween_1_2_785\DOTween\Modules\DOTweenModuleAudio.cs" />
+    <Compile Include="Assets\Scripts\Systems\CardSystem.cs" />
+    <Compile Include="Assets\Scripts\GameActions\EnemyTurnGA.cs" />
     <Compile Include="Assets\DOTween_1_2_785\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets\Scripts\UI\EndTurnButtonUI.cs" />
+    <Compile Include="Assets\Scripts\GameActions\DisCardAllCardsGA.cs" />
     <Compile Include="Assets\Scripts\Systems\CardViewHoverSystem.cs" />
     <Compile Include="Assets\DOTween_1_2_785\DOTween\Modules\DOTweenModuleUI.cs" />
+    <Compile Include="Assets\Scripts\Extension\ListExtensions.cs" />
+    <Compile Include="Assets\Scripts\Systems\EnemySystem.cs" />
     <Compile Include="Assets\DOTween_1_2_785\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\Scripts\General\ActionSystem\ReactionTiming.cs" />
     <Compile Include="Assets\Scripts\Systems\TestSystems.cs" />
     <Compile Include="Assets\DOTween_1_2_785\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
     <Compile Include="Assets\Scripts\General\Singleton.cs" />
     <Compile Include="Assets\Scripts\Views\CardView.cs" />
+    <Compile Include="Assets\Scripts\General\ActionSystem\GameAction.cs" />
     <Compile Include="Assets\Scripts\Creators\CardViewCreator.cs" />
     <Compile Include="Assets\Scripts\Data\CardData.cs" />
   </ItemGroup>
