@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Models\Card.cs" />
     <Compile Include="Assets\DOTween_1_2_785\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Scripts\Systems\CardSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\InterActions.cs" />
     <Compile Include="Assets\Scripts\GameActions\EnemyTurnGA.cs" />
     <Compile Include="Assets\DOTween_1_2_785\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Scripts\UI\EndTurnButtonUI.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Assets\Scripts\Systems\CardViewHoverSystem.cs" />
     <Compile Include="Assets\DOTween_1_2_785\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\Scripts\Extension\ListExtensions.cs" />
+    <Compile Include="Assets\Scripts\Systems\MatchSetupSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\EnemySystem.cs" />
     <Compile Include="Assets\DOTween_1_2_785\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Scripts\General\ActionSystem\ReactionTiming.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="Assets\Scripts\General\ActionSystem\GameAction.cs" />
     <Compile Include="Assets\Scripts\Creators\CardViewCreator.cs" />
     <Compile Include="Assets\Scripts\Data\CardData.cs" />
+    <Compile Include="Assets\Scripts\General\MouseUtil\MouseUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
