@@ -17,6 +17,7 @@ public class CardSystem : Singleton<CardSystem>
 
     void OnEnable()
     {
+        ActionSystem.AttachPerformer<PlayCardGA>(PlayCardPerformer);
         ActionSystem.AttachPerformer<DrawCardGA>(DrawCardsPerformer);
         ActionSystem.AttachPerformer<DisCardAllCardsGA>(DisCardsAllCardsPerformer);
         ActionSystem.SubscribeReaction<EnemyTurnGA>(EnemeyTurnPreReaction, ReactionTiming.PRE);
@@ -25,6 +26,7 @@ public class CardSystem : Singleton<CardSystem>
 
     void OnDisable()
     {
+        ActionSystem.DetachPerformer<PlayCardGA>();
         ActionSystem.DetachPerformer<DrawCardGA>();
         ActionSystem.DetachPerformer<DisCardAllCardsGA>();
         ActionSystem.UnsubscribeReaction<EnemyTurnGA>(EnemeyTurnPreReaction, ReactionTiming.PRE);
@@ -44,6 +46,7 @@ public class CardSystem : Singleton<CardSystem>
     }
     #endregion
 
+    #region Performers
     private IEnumerator DrawCardsPerformer(DrawCardGA drawCardGA)
     {
         int actualAmount = Mathf.Min(drawCardGA.Amount, drawPile.Count);
@@ -73,6 +76,19 @@ public class CardSystem : Singleton<CardSystem>
         hand.Clear();
     }
 
+    private IEnumerator PlayCardPerformer(PlayCardGA playCardGA)
+    {
+        hand.Remove(playCardGA.card);
+        CardView cardView = handView.RemoveCard(playCardGA.card);
+        yield return DiscardCard(cardView);
+        //todo ¿¨ÅÆÉúÐ§
+        foreach(var effect in playCardGA.card.Effects)
+        {
+            ActionSystem.Instance.AddReaction(new PerformEffectGA(effect));
+        }
+    }
+    #endregion
+
     #region Reactions
     private void EnemeyTurnPreReaction(EnemyTurnGA enemyTurnGA)
     {
@@ -92,6 +108,7 @@ public class CardSystem : Singleton<CardSystem>
         CardView cardView = CardViewCreator.Instance.CreateCardView(card,drawPileRoot.position,drawPileRoot.rotation);
         yield return handView.AddCard(cardView);
     }
+
 
     private void RefillDeck()
     {

@@ -16,6 +16,8 @@ public class CardView : MonoBehaviour
 
     [SerializeField] private GameObject wrapper;
 
+    [SerializeField] private LayerMask dropLayer;
+
     public Card Card { get; private set; }
 
     [Header("记录当前互动卡牌的起始位置")]
@@ -95,8 +97,10 @@ public class CardView : MonoBehaviour
     {
         if (!InterActions.Instance.PlayerCanInteract()) return;
         transform.DOKill();
-        if (Physics.Raycast(transform.position,Vector3.forward,out RaycastHit hit, 10f)){
+        if (Physics.Raycast(transform.position,Vector3.forward,out RaycastHit hit, 10f,dropLayer)){
             //play the card(需要赋予卡牌层级，然后触发对应的动作)
+            PlayCardGA playCardGA = new PlayCardGA(Card);
+            ActionSystem.Instance.Perform(playCardGA);
         }
         else
         {
