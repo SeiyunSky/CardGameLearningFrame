@@ -81,8 +81,11 @@ public class CardSystem : Singleton<CardSystem>
         hand.Remove(playCardGA.card);
         CardView cardView = handView.RemoveCard(playCardGA.card);
         yield return DiscardCard(cardView);
-        //todo ¿¨ÅÆÉúÐ§
-        foreach(var effect in playCardGA.card.Effects)
+        
+        SpendManaGA spendManaGA = new(playCardGA.card.Mana);
+        ActionSystem.Instance.AddReaction(spendManaGA);
+
+        foreach (var effect in playCardGA.card.Effects)
         {
             ActionSystem.Instance.AddReaction(new PerformEffectGA(effect));
         }

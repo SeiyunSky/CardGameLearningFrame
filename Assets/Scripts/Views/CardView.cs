@@ -97,8 +97,8 @@ public class CardView : MonoBehaviour
     {
         if (!InterActions.Instance.PlayerCanInteract()) return;
         transform.DOKill();
-        if (Physics.Raycast(transform.position,Vector3.forward,out RaycastHit hit, 10f,dropLayer)){
-            //play the card(需要赋予卡牌层级，然后触发对应的动作)
+        if (ManaSystem.Instance.HasEnoughMana(Card.Mana)&&
+            Physics.Raycast(transform.position,Vector3.forward,out RaycastHit hit, 10f,dropLayer)){
             PlayCardGA playCardGA = new PlayCardGA(Card);
             ActionSystem.Instance.Perform(playCardGA);
         }
