@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e379e924372a40841b7d7a2d0497854b, type: 3}
+  m_Name: MagicShoter
+  m_EditorClassIdentifier: 
+  <Image>k__BackingField: {fileID: 21300000, guid: 39f34d998f85a734b95ca8bc2d7c7198, type: 3}
+  <Health>k__BackingField: 40
+  <Deck>k__BackingField:
+  - {fileID: 11400000, guid: e0f0805fb0b37be42b08bccef58ff4c9, type: 2}
+  - {fileID: 11400000, guid: e0f0805fb0b37be42b08bccef58ff4c9, type: 2}
+  - {fileID: 11400000, guid: e0f0805fb0b37be42b08bccef58ff4c9, type: 2}
+  - {fileID: 11400000, guid: e0f0805fb0b37be42b08bccef58ff4c9, type: 2}
+  - {fileID: 11400000, guid: e0f0805fb0b37be42b08bccef58ff4c9, type: 2}
+  - {fileID: 11400000, guid: 3e712597047d1fd4dbe35b7cc22b9a1c, type: 2}
+  - {fileID: 11400000, guid: 3e712597047d1fd4dbe35b7cc22b9a1c, type: 2}

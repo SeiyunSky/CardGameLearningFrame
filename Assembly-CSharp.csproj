@@ -74,10 +74,12 @@
     <Compile Include="Assets\Scripts\Systems\InterActions.cs" />
     <Compile Include="Assets\Scripts\GameActions\PerformEffectGA.cs" />
     <Compile Include="Assets\Scripts\Effect\DrawCardEffect.cs" />
+    <Compile Include="Assets\Scripts\Systems\HeroSystem.cs" />
     <Compile Include="Assets\Scripts\Models\Effect.cs" />
     <Compile Include="Assets\Scripts\GameActions\EnemyTurnGA.cs" />
     <Compile Include="Assets\Scripts\Systems\ManaSystem.cs" />
     <Compile Include="Assets\DOTween_1_2_785\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets\Scripts\Views\HeroView.cs" />
     <Compile Include="Assets\Scripts\UI\EndTurnButtonUI.cs" />
     <Compile Include="Assets\Scripts\GameActions\DisCardAllCardsGA.cs" />
     <Compile Include="Assets\Scripts\Systems\CardViewHoverSystem.cs" />
@@ -85,19 +87,23 @@
     <Compile Include="Assets\Scripts\Extension\ListExtensions.cs" />
     <Compile Include="Assets\Scripts\Systems\MatchSetupSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\EnemySystem.cs" />
+    <Compile Include="Assets\Scripts\Data\EnemyData.cs" />
     <Compile Include="Assets\DOTween_1_2_785\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Scripts\GameActions\SpendManaGA.cs" />
+    <Compile Include="Assets\Scripts\Views\CombatantView.cs" />
     <Compile Include="Assets\Scripts\GameActions\RefillManaGA.cs" />
     <Compile Include="Assets\Scripts\General\ActionSystem\ReactionTiming.cs" />
     <Compile Include="Assets\Scripts\Systems\TestSystems.cs" />
     <Compile Include="Assets\Scripts\GameActions\PlayCardGA.cs" />
     <Compile Include="Assets\DOTween_1_2_785\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
+    <Compile Include="Assets\Scripts\Views\EnemyView.cs" />
     <Compile Include="Assets\Scripts\General\Singleton.cs" />
     <Compile Include="Assets\Scripts\Views\CardView.cs" />
     <Compile Include="Assets\Scripts\General\ActionSystem\GameAction.cs" />
     <Compile Include="Assets\Scripts\Creators\CardViewCreator.cs" />
     <Compile Include="Assets\Scripts\Data\CardData.cs" />
     <Compile Include="Assets\Scripts\General\MouseUtil\MouseUtil.cs" />
+    <Compile Include="Assets\Scripts\Data\HeroData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
